@@ -1,0 +1,50 @@
+% =====================================================================
+%  Préambule : packages et réglages communs.
+%  Restez sur des packages courants : ceux-ci sont tous compris
+%  par la version web du cours.
+% =====================================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[inkscapelatex=false]{svg}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[french]{babel}
+\usepackage{csquotes}           % guillemets corrects, recommandé avec biblatex
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{ref.bib}
+
+% Chapitres numérotés dans leur partie : II.1, II.2… (la numérotation repart à 1
+% à chaque partie). Supprimez cette ligne pour une numérotation continue 1, 2, 3…
+\counterwithin{chapter}{part}
+\renewcommand{\thepart}{\arabic{part}}
+\frenchsetup{PartNameFull=false}
+
+
+% Équations et figures numérotées par chapitre : (II.1.1), (II.1.2)…
+\numberwithin{equation}{chapter}
+
+% Exercices et corrigés
+% Sur le site, « exercice » devient un encadré et « corrige » un encadré dépliable.
+\theoremstyle{definition}
+\newtheorem{exercice}{Exercice}[chapter]
+\newtheorem*{corrige}{Corrigé}
+
+% ----- Encadrés -----
+% \begin{encadre}{Pour aller plus loin} … \end{encadre}
+% (« block » fonctionne aussi, pour reprendre directement un bloc de diaporama Beamer)
+\usepackage[most]{tcolorbox}
+\tcbset{encadre/.style={enhanced, breakable, arc=0pt, boxrule=0.5pt,
+  colback=white, colframe=black, colbacktitle=black!8, coltitle=black,
+  fonttitle=\bfseries, left=8pt, right=8pt, top=5pt, bottom=5pt,
+  before skip=1em, after skip=1em}}
+\newtcolorbox{encadre}[1]{encadre, title={#1}}
+\newtcolorbox{block}[1]{encadre, title={#1}}
+
+% Vos macros
+\newcommand{\unite}[1]{\,\mathrm{#1}}
+\input{mise-en-page-pdf}

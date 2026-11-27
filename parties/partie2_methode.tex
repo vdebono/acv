@@ -1,0 +1,115 @@
+% =====================================================================
+%  Partie 2 — Méthode de l'ACV
+%  Les figures des diapositives sont signalées en commentaire « FIGURE ».
+% =====================================================================
+\part{Méthode générique de l'ACV}
+
+% ---------------------------------------------------------------------
+\chapter{Historique et présentation}
+La méthode de l'analyse de cycle de vie n'est pas propre à l'architecture, au contraire. Cette section détaille tout d'abord la méthode générique de l'ACV, pour ensuite faire les parallèles et applications à l'architecture.
+\section{Historique}
+
+\begin{itemize}
+  \item \textbf{1969} : Coca-Cola réalise une étude comparative de différents emballages, un des premiers exemples d'analyse multicritère\footfullcite{feraille_analyse_2022}.
+  \item \textbf{1972} : le rapport Meadows, \textit{The Limits to Growth}, met en exergue les dangers, pour l'environnement et donc l'humanité, de la croissance économique et démographique que connaît le monde.
+  \item \textbf{1970-1987} : différents chocs pétroliers favorisent le développement des bilans énergétiques et des premières approches d'évaluation sur le cycle de vie (\textit{Bilan produit} en Europe, \textit{REPA} aux États-Unis).
+  \item \textbf{1997} : la méthode d'ACV est normalisée par l'ISO.
+  \item \textbf{2000-2010} : l'ACV se démocratise et commence à s'intégrer au secteur du bâtiment. Les produits de construction sont évalués à travers les FDES.
+  \item \textbf{2020} : la RE 2020 introduit l'ACV dans la réglementation française de la construction neuve.
+\end{itemize}
+
+\section{Présentation}
+
+L'analyse du cycle de vie (ACV) est une méthode d'évaluation qui permet de réaliser un bilan environnemental multicritère d'un système (produit, service ou procédé) sur l'ensemble de son cycle de vie : extraction des matières premières, fabrication, transport, distribution, utilisation, fin de vie, valorisation.
+
+Elle repose sur trois approches : multi-étapes, multicritère et comparative.
+
+\subsection*{Approche multi-étapes}
+L'ACV prend en compte l'ensemble du cycle de vie, dans le but d'éviter les transferts de pollution d'une étape à l'autre. On évalue les impacts d'un produit du berceau à la tombe (\textit{cradle to grave}).
+
+
+\subsection*{Approche multicritère}
+L'ACV prend en compte plusieurs impacts environnementaux, pour éviter de remplacer un problème par un autre (transfert d'impact). On cherche à couvrir « tous » les problèmes environnementaux : atteintes aux ressources naturelles, à la santé et à la biodiversité.
+
+
+\subsection*{Approche comparative}
+
+L'ACV permet de comparer plusieurs produits répondant à la même fonction. Le calcul des émissions, extractions et impacts est rapporté à une fonction définie appelée \textbf{unité fonctionnelle}.
+
+La norme ISO 14044 définit l'unité fonctionnelle comme la « performance quantifiée d'un système de produits, destinée à être utilisée comme unité de référence dans une ACV ». En ACV, on ne compare pas des objets : on compare la même fonction rendue par des objets ou systèmes différents. L'unité fonctionnelle est la traduction mesurable de cette fonction.
+
+% ---------------------------------------------------------------------
+\chapter{Fonctionnement général de l'ACV}
+Une ACV générique (appliquée à un produit ou un service) nécessite les 4 étapes suivantes :
+\begin{enumerate}
+  \item \textbf{Définition des objectifs et du champ de l'étude} : frontières du système, unité fonctionnelle, hypothèses.
+  \item \textbf{Analyse de l'inventaire} : inventorier les émissions et extractions, préciser certains choix de modélisation.
+  \item \textbf{Caractérisation des impacts} : choix d'une méthode d'impacts, normalisation et pondération éventuelles.
+  \item \textbf{Interprétation des résultats} : analyses de sensibilité, d'incertitude, modifications du modèle.
+\end{enumerate}
+
+
+\section{Indicateurs}
+
+\subsection*{Les indicateurs des FDES}
+
+Les Fiches de Déclaration Environnementale et Sanitaire (FDES, voir partie~4) contiennent 36 indicateurs, que l'on peut regrouper en trois familles :
+
+\paragraph{Climat}
+\begin{itemize}
+  \item Changement climatique (kg éq. CO$_2$) : fossile, biogénique, usage des sols.
+\end{itemize}
+
+\paragraph{Ressources et circularité}
+\begin{itemize}
+  \item Épuisement des ressources : minéraux et métaux (kg éq. Sb), fossiles (MJ).
+  \item Énergie primaire (MJ) : renouvelable et non renouvelable, chacune hors matière, matière et totale.
+  \item Matières secondaires (kg).
+  \item Combustibles secondaires (MJ) : renouvelables et non renouvelables.
+  \item Eau : utilisation nette d'eau douce (m$^3$), privation (m$^3$ éq. de privation).
+  \item Déchets éliminés (kg) : dangereux, non dangereux, radioactifs.
+  \item Flux de valorisation (kg) : composants pour réutilisation, matériaux pour recyclage, matériaux pour récupération d'énergie.
+  \item Énergie exportée (MJ).
+\end{itemize}
+
+\paragraph{Santé et écosystèmes}
+\begin{itemize}
+  \item Santé humaine : particules fines (incidence de maladies), rayonnements ionisants (kBq éq. U-235), toxicité humaine cancérogène et non cancérogène (CTUh), appauvrissement de l'ozone (kg éq. CFC-11), formation d'ozone photochimique (kg éq. COV non méthaniques).
+  \item Qualité des écosystèmes : acidification (mol éq. H$^+$), eutrophisation des eaux douces (kg éq. P), marine (kg éq. N) et terrestre (mol éq. N), écotoxicité des eaux douces (CTUe), utilisation et qualité des sols (points).
+\end{itemize}
+
+\subsection*{Comparer des impacts différents}
+
+\begin{displayquote}
+« Comment comparer toxicité humaine et effet de serre ? En d'autres mots, comparer des pommes et des poires ? Certains diront que ce ne sont pas des pommes et des poires, mais des pommes et des éléphants tellement ces impacts diffèrent. »\footfullcite{saade_analyse_nodate}
+\end{displayquote}
+
+Une ACV produit des dizaines d’indicateurs exprimés dans des unités différentes : on ne peut pas additionner des kg éq. CO$_2$, des m$^3$ d’eau et des kg de déchets. Pour comparer deux variantes de projet sur l’ensemble de ces critères, des méthodes d’agrégation ont été développées, comme ReCiPe ou IMPACT World+. Elles regroupent les indicateurs en quelques grandes catégories de dommages (santé humaine, qualité des écosystèmes, ressources), puis peuvent les pondérer pour obtenir un score unique. Cette pondération repose toutefois sur des choix de valeurs (quel poids donner à l’eau par rapport au climat ?), ce qui explique qu’elle reste un sujet de recherche actif et débattu.
+
+\section{Limites}
+
+\subsection*{Allocation}
+
+Le problème de multifonctionnalité, parfois appelé allocation, provient du fait qu'un même procédé peut générer plusieurs produits, et donc répondre à plusieurs fonctions. Comment allouer l'inventaire (puis les impacts) du procédé à ces différents produits ? La méthode de partitionnement des procédés, parfois appelée méthode de l'allocation, est l'une des méthodes pour résoudre ce problème, parmi d'autres (expansion du système, méthode de substitution, etc.).
+
+L'exemple du haut fourneau, qui produit à la fois de l'acier et du laitier, montre que le choix de la clé de répartition modifie le résultat, selon que l'on répartit les émissions selon la masse ou selon le prix des produits.
+
+\subsection*{Données}
+
+L'inventaire d'un bâtiment nécessite des données sur chacun de ses produits et procédés de construction. Ces données sont présentées dans la partie~4. La bonne intégrité de ces données est donc nécessaire à une ACV rigoureuse et pertinente.
+
+\subsection*{Optimisation multicritère}
+
+Il y a plusieurs indicateurs environnementaux et plusieurs méthodes d'agrégation. Chaque méthode d'agrégation fournit des scores différents : il n'existe pas un unique score environnemental.
+
+\subsection*{Optimisation et architecture}
+
+Une évaluation environnementale ne suffit pas à elle seule à arbitrer toutes les valeurs engagées dans un projet d'architecture.
+
+\begin{displayquote}
+« Une condition préalable à toute comparaison dans le cadre d'une ACV est que l'“unité fonctionnelle” et que la qualité du ou des produits alternatifs soient identiques (on ne peut comparer des pommes et des oranges). Toutefois, en matière de conception et d'architecture, cette condition semble constituer un défaut fondamental dans l'application de l'ACV : le concepteur ou l'architecte vise une qualité supérieure (au sens large du terme, incluant des aspects immatériels tels que l'esthétique et l'image) : par conséquent, la nouvelle conception ne présente jamais la même qualité que l'ancienne solution. »\footfullcite{vogtlander_practical_2010}
+\end{displayquote}
+
+L'unité fonctionnelle ne mesure pas la qualité architecturale et ne permet pas de comparer des projets à « qualité » égale. L'ACV compare des projets à fonction égale. Fonction et qualité architecturale sont deux notions différentes.
+
+\chapter{Conclusion générique sur l'ACV}

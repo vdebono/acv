@@ -1,0 +1,30 @@
+% =====================================================================
+%  Analyse de cycle de vie
+%  Projet principal : ne contient que la structure du livre.
+%  Le contenu est dans le dossier parties/ (un fichier par partie).
+% =====================================================================
+\documentclass[11pt,a4paper,oneside,openany]{book}
+\input{preambule}
+
+\title{Notes et synthèse de l'Analyse de cycle de vie en architecture}
+\author{Victor De Bono}
+\date{ENSAP Lille, UE 567\\ \today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\mainmatter
+\tableofcontents
+
+\newpage
+\setcounter{part}{0}  % la numérotation des parties commence à 0
+\input{parties/partie0_introduction}
+\input{parties/partie1_contexte}
+\input{parties/partie2_methode}
+\input{parties/partie3_acv_architecture}
+
+\backmatter
+\printbibliography[heading=bibintoc]   % bibintoc = l'ajoute à la table des matières
+\end{document}
